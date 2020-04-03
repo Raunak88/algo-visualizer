@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">Algorithm Visualizer</a>
+	</nav>
+	<div class="container">
+		<div class="row mt-2">
+			<div class="col-12 form-inline mt-2">
+				<label for="data" class="mr-2">Dataset Size</label>
+				<input type="number" class="form-control mr-2" id="data" placeholder="enter a number">
+				<button class="btn btn-outline-primary mr-2" onClick="assignData()">
+					Assign Data size
+				</button>
+				<button class="btn btn-outline-success mr-2" onClick="createTowers()">
+					Generate Data
+				</button>
+				<button class="btn btn-outline-secondary mr-2" onClick="bubbleSort()">
+					Bubble Sort
+				</button>
+				<button class="btn btn-outline-secondary " onClick="selectionSort()">
+					Selection Sort
+				</button>
+				<div class="form-group mt-3">
+					<label for="search_data" class="mr-2">Number to search</label>
+					<input type="number" class="form-control mr-2" id="search_data"
+						placeholder="enter a number to search">
+					<button class="btn btn-outline-warning mr-2" onClick="linearSearch()">
+						Linear Search
+					</button>
+					<button class="btn btn-outline-warning mr-2" onClick="binarySearch()">
+						Binary Search
+					</button>
+					<button class="btn btn-outline-danger mr-2" onClick="resetData()">
+						Reset Data
+					</button>
+					
+				</div>
+			</div>
+		</div>
+		<div class="row mt-5">
+			<div class="col-8 mx-auto">
+				<div id="towers" class="d-flex flex-row align-items-end border border-primary p-4">
+
+				</div>
+				<label for="delay" class="mt-5">Animation speed in ms</label>
+				<input type="number" class="form-control mr-2" id="delay"
+					placeholder="enter a number in multiple of 1000">
+				<div class="alert alert-success hide mt-3" id="sorted" role="alert">
+					Elements Sorted <br>
+					<button class="btn btn-outline-danger mt-2" onClick="resetData()">
+						Reset Data<br>
+					</button>
+				</div>
+				<div class="alert alert-success hide mt-3" id="searched" role="alert">
+					Searched element found at Index : <strong class="ml-2" id="indexFound"></strong> is marked in yellow<br>
+					<button class="btn btn-outline-danger mt-2" onClick="resetData()">
+						Reset Data
+					</button>
+				</div>
+				<div class="alert alert-danger hide mt-3" id="notFound" role="alert">
+					Searched element not found<br>
+					<button class="btn btn-outline-danger mt-2" onClick="resetData()">
+						Reset Data
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="scripts.js"></script>
+</body>
+
+</html>

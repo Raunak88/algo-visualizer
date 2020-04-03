@@ -1,0 +1,27 @@
+span{
+	background-color:rgb(88, 183, 255);			
+	border:1px solid black;
+	display:inline-block;
+	margin:0 2px;
+	padding:2px;
+}
+
+.highIndex{
+	background-color:green
+}
+.lowIndex{
+	background-color:red;
+}
+.midIndex{
+	background-color:yellow;
+}
+.towers{
+	max-width:90%;
+	overflow-y:scroll;
+}		
+.hide{
+	display:none;
+	}
+.show{
+	display:block
+}
